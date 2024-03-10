@@ -6,3 +6,15 @@ spring:
       prefix: /templates/
       suffix: .html
     static-path-pattern: /**
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1444;databaseName=LoginDatabase;TrustServerCertificate=True
+    username: sa
+    password: P@ssw0rd
+  jpa:
+    show-sql: True
+    generate-ddl: false
+  flyway:
+    baseline-on-migrate: true
+    locations:
+      - classpath:db/migration
